@@ -1,0 +1,10 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/docs/
+/coverage/
+/pkg/
+/tmp/
+
+.ruby-version
+.DS_Store
