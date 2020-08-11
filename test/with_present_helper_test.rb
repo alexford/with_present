@@ -2,11 +2,11 @@
 
 require "test_helper"
 
-class HelperTest < Minitest::Test
+class WithPresentHelperTest < Minitest::Test
   include WithPresent::Helpers
 
   def test_nil_value_returns_nil
-    assert_nil with_present(nil) { |_v| 'foo' }
+    assert_nil with_present(nil) { |_v| 'Yielded' }
   end
 
   def test_present_value_yields_value

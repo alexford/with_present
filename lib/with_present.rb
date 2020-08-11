@@ -10,5 +10,9 @@ module WithPresent
     def with_present(value)
       yield(value)&.html_safe if value.present?
     end
+
+    def without_present(value)
+      yield(value)&.html_safe unless value.present?
+    end
   end
 end
