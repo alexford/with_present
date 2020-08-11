@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 require "with_present/version"
+require 'with_present/railtie' if defined?(Rails)
+
+require 'active_support/core_ext'
 
 module WithPresent
-  # TODO
+  module Helpers
+    def with_present(value)
+      yield(value)&.html_safe if value.present?
+    end
+  end
 end
